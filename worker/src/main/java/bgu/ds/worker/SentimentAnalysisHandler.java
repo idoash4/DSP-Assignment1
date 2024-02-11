@@ -19,7 +19,6 @@ public class SentimentAnalysisHandler {
         props.put("annotators", "tokenize, ssplit, parse, sentiment");
         this.sentimentPipeline = new StanfordCoreNLP(props);
     }
-
     public int findSentiment(String review) {
         int mainSentiment = 0;
         if (review!= null && review.length() > 0) {
